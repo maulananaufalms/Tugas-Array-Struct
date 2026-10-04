@@ -80,5 +80,19 @@ int main() {
         cout << "\nData tidak ditemukan." << endl;
     }
 
+    if (index != -1) {
+
+        float kehadiranBaru;
+
+        cout << "\nMasukkan persentase kehadiran baru: ";
+        cin >> kehadiranBaru;
+
+        persentaseKehadiran[index] = kehadiranBaru;
+
+        cout << "\nData setelah update:" << endl;
+        cout << "NIM       : " << nim[index] << endl;
+        cout << "Nama      : " << nama[index] << endl;
+        cout << "Kehadiran : " << persentaseKehadiran[index] << "%" << endl;
+    }
     return 0;
 }
