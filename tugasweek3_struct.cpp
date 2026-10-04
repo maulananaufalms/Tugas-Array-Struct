@@ -64,5 +64,40 @@ int main() {
 
     cout << "Total Mahasiswa: 40" << endl;
 
+    string cariNIM;
+    int index = -1;
+
+    cout << "\nMasukkan NIM yang ingin dicari: ";
+    cin >> cariNIM;
+
+    for (int i = 0; i < 40; i++) {
+        if (mahasiswa[i].nim == cariNIM) {
+            index = i;
+            break;
+        }
+    }
+
+    if (index != -1) {
+        cout << "\nData ditemukan:" << endl;
+        cout << "NIM       : " << mahasiswa[index].nim << endl;
+        cout << "Nama      : " << mahasiswa[index].nama << endl;
+        cout << "Kehadiran : " << mahasiswa[index].persentaseKehadiran << "%" << endl;
+    } else {
+        cout << "\nData tidak ditemukan." << endl;
+    }
+
+    if (index != -1) {
+        float kehadiranBaru;
+        cout << "\nMasukkan persentase kehadiran baru: ";
+        cin >> kehadiranBaru;
+
+        mahasiswa[index].persentaseKehadiran = kehadiranBaru;
+
+        cout << "\nData setelah diperbarui:" << endl;
+        cout << "NIM       : " << mahasiswa[index].nim << endl;
+        cout << "Nama      : " << mahasiswa[index].nama << endl;
+        cout << "Kehadiran : " << mahasiswa[index].persentaseKehadiran << "%" << endl;
+    }
+
     return 0;
 }
